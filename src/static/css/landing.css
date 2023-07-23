@@ -1,0 +1,217 @@
+.hero-section{
+    max-width: 2000px;  
+    height: 85vh;
+    max-height: 500px;
+}
+
+.hero-section .row{
+    --bs-gutter-x: 0;
+}
+
+.slogan img{
+    margin-top: -1rem;
+    margin-left: 5rem;
+}
+
+.slogan img:nth-child(2){
+    margin-right: -3.9rem;
+}
+.slogan img:nth-child(3){
+    transform: scaleX(-1);
+    margin-top: 7rem;
+    margin-left: -3rem;
+}
+
+.slogan img:nth-child(4){
+    margin-top: -3.5rem;
+}
+
+
+.side-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(https://images.unsplash.com/photo-1541944743827-e04aa6427c33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80);
+    background-size: cover;
+    background-position: center;
+ 
+}
+
+.side-image h1{
+    color: white;
+    font-size: 5rem;
+    margin-top: 8rem;
+    margin-left: -25rem;
+    font-family: var(--th-f-headings)!important;
+}
+
+.slogan-bar{
+    margin-top: -1.5rem;
+}
+
+.slogan-bar span{
+    margin-left: -25rem;
+    border-radius: 4px;
+    height: 15px;
+    width: 80%;
+}
+.slogan-bar span:nth-child(2){
+    margin-left: -25rem;
+    margin-top: 1rem;
+    height: 10px;
+    width: 30%;
+}
+
+.side-image h3{
+    color: white;
+    margin-top: 1.5rem;
+    margin-left: -25rem;
+}
+
+.hero-section button{
+    margin-top: 1.5rem;
+    margin-left: -25rem;
+} 
+
+.explore-btn{
+  margin-left: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.explore-btn div img{
+    margin-top: -2rem;
+    margin-left: -.4rem;
+    transition: var(--th-transition);
+}
+
+.arrow-circle{
+    margin-top: .2rem;
+    margin-left: -1.5rem;
+    transition: var(--th-transition);
+}
+
+
+.explore-btn:hover .arrow-circle{
+    margin-left: -2rem;
+}
+
+
+
+/* steps section */
+
+.steps-section{
+    margin-top: 8rem;
+}
+
+.steps-section .row{
+    overflow: hidden;
+    max-width: 1400px;
+
+}
+
+.header h1{
+    font-size: 3rem;
+    padding: 0rem 1rem;
+    margin-bottom: 2rem!important;
+    border-bottom: 5px solid var(--th-pal-1);
+}
+
+.n-r{
+    transform: scaleX(-1);
+}
+
+.string-img{
+    position: absolute;
+    top: 10rem;
+    z-index: -1;
+    max-height: 2000px;
+}
+
+.overlay{
+    position: absolute;
+    z-index: -1;
+    height: 30rem;
+    width: 30rem;
+    top: 10rem;
+    left: -15rem;
+
+}
+
+
+.overlay:nth-child(2){
+    position: absolute;
+    z-index: -1;
+    height: 50rem;
+    width: 50rem;
+    top: 30rem;
+    left: 50rem;
+
+}
+
+.overlay:nth-child(3){
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: -1;
+    height: 50rem;
+    width: 45rem;
+    top: 135rem;
+    left: -15rem;
+
+}
+
+.steps{
+    margin-top: 19rem;
+    padding: 0 6rem;
+}
+
+
+.steps h6{
+    width: max-content!important;
+    border-radius: 8px;
+    padding: .5rem .5rem;
+}
+
+.steps p{
+    margin-top: -.6rem;
+}
+
+.deets-sqr{
+    border-radius: 5px;
+    height: 7px;
+    width: 80%;
+}
+
+.steps-desc{
+    width: 100%;
+}
+
+
+.assurance{
+    margin-top: 40rem;
+    margin-left: 15rem;
+    padding: 3rem 4rem;
+}
+
+.assurance h1{
+    font-size: 4.5rem;
+}
+
+
+
+.footer-section{
+    margin-top: 10rem;
+}
+
+.footer-section h3{
+    border-bottom: 2px solid white;
+    width: fit-content;
+    margin-top: 3rem;
+}
+
+.footer-title{
+    font-family: var(--th-f-headings);
+    font-size: 2rem;
+    border-bottom: none!important;
+}
+
+.email{
+    border: none!important;
+}
