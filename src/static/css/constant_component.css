@@ -1,0 +1,25 @@
+.footer-section{
+    max-width: 1400px;  
+    margin-top: 10rem;
+}
+
+.footer-section h3{
+    border-bottom: 2px solid white;
+    width: fit-content;
+    margin-top: 3rem;
+}
+
+.footer-title{
+    font-family: var(--th-f-headings);
+    font-size: 2rem;
+    border-bottom: none!important;
+}
+
+.letter{
+    width: 110%;
+    font-size: 1.8rem;
+}
+
+.email{
+    border: none!important;
+}

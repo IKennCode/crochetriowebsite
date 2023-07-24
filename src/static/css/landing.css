@@ -1,5 +1,5 @@
 .hero-section{
-    max-width: 2000px;  
+    max-width: 1400px;  
     height: 85vh;
     max-height: 500px;
 }
@@ -196,22 +196,3 @@
 
 
 
-.footer-section{
-    margin-top: 10rem;
-}
-
-.footer-section h3{
-    border-bottom: 2px solid white;
-    width: fit-content;
-    margin-top: 3rem;
-}
-
-.footer-title{
-    font-family: var(--th-f-headings);
-    font-size: 2rem;
-    border-bottom: none!important;
-}
-
-.email{
-    border: none!important;
-}

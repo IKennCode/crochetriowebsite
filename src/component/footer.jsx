@@ -7,7 +7,7 @@ const Footer = () => {
             <div class="row">
                 <div class="col-6 d-flex flex-column row-gap-3">
                     <h3 className='footer-title text-white'>YourCrochet</h3>
-                    <h2 class=" fw-bold text-white">Subscribe To Our News Letter.</h2>
+                    <h2 class=" fw-bold text-white letter">Subscribe To Our News Letter.</h2>
                     <form class="d-flex flex-row column-gap-2">
                         <input type="email" name="email" id="email" class="email rounded-3 p-1" size="30px" placeholder="Enter Email..." />
                         <button className='btn fs-4 px-4 th-color-1 fw-medium'>Send<i class="bi bi-arrow-right"></i></button>
