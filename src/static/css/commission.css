@@ -1,0 +1,45 @@
+@import url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css");
+
+.wizard-icon-container{
+    border-radius: 8px!important;
+}
+
+.react-form-wizard .wizard-icon-circle.square_shape {
+    border-radius: 8px!important;
+}
+
+.wizard-header h4{
+    font-weight: bold!important;
+}
+
+.wizard-navigation,
+.wizard-tab-content,
+.react-form-wizard,
+.step-form,
+.hello{
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)!important;
+}
+
+
+.wizard-progress-bar{
+    border-radius: 5rem!important;
+    transition: var(--th-transition)!important;
+}
+
+
+.wizard-footer-right,
+.wizard-footer-left{
+    transition: var(--th-transition);
+}
+
+.wizard-footer-right:hover,
+.wizard-footer-left:hover{
+    transform: scale(0.98)!important; 
+}
+.tab-form{
+    transition: var(--th-transition)
+}
+
+.tab-form input{
+    border-color: grey!important;
+}

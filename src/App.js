@@ -5,6 +5,7 @@ import './static/css/constant_component.css';
 
 import Navbar from "./component/Navbar";
 import Landing from "./pages/Landing";
+import Commission from "./pages/Commission";
 import Footer from "./component/footer";
 
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
         <Navbar/>
-        <Landing />
+        <Commission />
         <Footer />
     </>
   );
