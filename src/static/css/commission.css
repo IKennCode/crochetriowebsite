@@ -40,6 +40,19 @@
     transition: var(--th-transition)
 }
 
-.tab-form input{
+.tab-form input,
+.tab-form select{
     border-color: grey!important;
+}
+
+.form-review h5{
+    width: 100%;
+    margin-bottom: .5rem;
+    text-align: start;
+    border-bottom: 2px solid grey;
+}
+
+
+.form-review h6{
+    margin-left: 1rem;
 }

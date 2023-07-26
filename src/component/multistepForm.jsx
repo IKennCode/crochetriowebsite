@@ -6,7 +6,6 @@ import '../static/css/commission.css'
 const MultistepForm = () => {
     const handleComplete = () => {
         console.log("Form completed!");
-        // Handle form completion logic here
       };
       return (
         <>
@@ -26,19 +25,55 @@ const MultistepForm = () => {
                             </div>
                             <div className="form-group d-flex flex-column row-gap-2">
                                 <input type="email" className='form-control' name="email" id="email" placeholder='Enter Email'/>
-                                <input type="text" className='form-control' name="address" id="address" placeholder='Address' />
+                                <input type="text" className='form-control' name="address" id="address" placeholder='Delivery Address' />
                             </div>
                         </form>
                         <hr />
                     </FormWizard.TabContent>
                     <FormWizard.TabContent  title="Request Details" icon="ti-settings">
-                        <h3>Second Tab</h3>
-                        <p>Some content for the last tab</p>
+                        <form className='tab-form d-flex flex-column justify-content-center row-gap-4 mt-4 px-3'>
+                            <div className="form-group d-flex flex-column row-gap-2">
+                                <input type="file" name="design" id="design" />
+                            </div>
+                            <div className="form-group d-flex flex-column row-gap-2">
+                                <select className='form-select' name="yarn-type" id="yarn-type">
+                                    <option value="">Yarn Type</option>
+                                    <option value="wool">Wool</option>
+                                    <option value="cotton">Cotton</option>
+                                    <option value="acrylic">Acrylic</option>
+                                    <option value="crochet-thread">Crochet Thread</option>
+                                </select>
+                            </div>
+                            <div className="form-group d-flex flex-column row-gap-2">
+                                <select className='form-select' name="product-type" id="product-type">
+                                    <option value="">Product Type</option>
+                                    <option value="keychain">Keychain-P500</option>
+                                    <option value="doll">Doll-P1000</option>
+                                    <option value="headwear">Headwear-P2000</option>
+                                </select>
+                            </div>
+                        </form>
                         <hr />
                     </FormWizard.TabContent>
                     <FormWizard.TabContent title="Last step" icon="ti-check">
-                        <h3>Last Tab</h3>
-                        <p>Some content for the last tab</p>
+                        <div className='form-review d-flex flex-column align-items-start p-3 border border-3 rounded-3'>
+                            <h4 className='text-center mb-5 w-100'>-----Request Form Review-----</h4>
+                            <h5>Personal Details</h5>
+                            <h6>Full Name: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Email: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Phone Number: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Delivery Address: <span className='fw-light'>Sample Value</span></h6>
+                            <h5>Request Details</h5>
+                            <h6>Design Reference: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Yarn Type: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Product Type: <span className='fw-light'>Sample Value</span></h6>
+                            <h5>Payment Details</h5>
+                            <h6>Payment Method: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Product Amount: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Service Amount: <span className='fw-light'>Sample Value</span></h6>
+                            <h6>Total Amount: <span className='fw-light'>Sample Value</span></h6>
+                            <h4 className='text-center mt-5 w-100'>-----To Proceed To Checkout Click "Finish"-----</h4>
+                        </div>
                         <hr />
                     </FormWizard.TabContent>
                     </FormWizard>
