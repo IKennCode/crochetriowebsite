@@ -1,4 +1,6 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './static/css/style_config.css';
 import './static/css/constant_component.css';
@@ -14,7 +16,10 @@ function App() {
   return (
     <>
         <Navbar/>
-        <Commission />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/services/commission" element={<Commission />} />
+          </Routes>
         <Footer />
     </>
   );

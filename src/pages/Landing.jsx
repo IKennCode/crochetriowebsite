@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../static/css/landing.css'
 import dot_sm from '../static/images/dot_small.png';
 import dot_lg from '../static/images/dot_lg.png';
@@ -29,7 +30,9 @@ const Landing = () => {
                     <h3 className='w-50'>Crochet your way to your love ones.</h3>
                 </div>
                 <div className='hero-action d-flex flex-row'>
-                    <button className='btn fs-4 px-4 th-color-1 fw-medium'>Order</button>
+                    <button className='btn fs-4 px-4 th-color-1 fw-medium'>
+                      <Link to="/services/commission" className='text-decoration-none th-color-1'>Order</Link>
+                    </button>
                     <div className='explore-btn d-flex flex-row'>
                       <div className='arrow-explore'>
                         <h6 className='text-white'>Explore</h6>
