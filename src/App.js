@@ -9,6 +9,7 @@ import Navbar from "./component/Navbar";
 import Landing from "./pages/Landing";
 import Commission from "./pages/Commission";
 import Footer from "./component/footer";
+import PaymentConfirm from "./pages/PaymentConfirm";
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/services/commission" element={<Commission />} />
+            <Route path="/services/commission/payment_confirm" element={<PaymentConfirm />} />
           </Routes>
         <Footer />
     </>
