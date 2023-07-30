@@ -1,16 +1,11 @@
 import React, {useRef,useState,useEffect} from 'react'
+import {InfinitySpin} from  'react-loader-spinner'
 import FormWizard from "react-form-wizard-component";
 import 'react-form-wizard-component/dist/style.css';
 import '../static/css/commission.css'
 
 const MultistepForm = () => {
-
-    // const fullname_ref = useRef(null);
-    // const email = useRef(null);
-    // const phone = useRef(null);
-    // const address = useRef(null);
-    // const yarn_type_ref = useRef(null);
-    // const product_type_ref = useRef(null);
+    sessionStorage.clear()
 
     const [fullname,setFullname] = useState("");
     const [email,setEmail] = useState("");
@@ -22,14 +17,60 @@ const MultistepForm = () => {
     const [service_amount,setServiceAmount] = useState(3000);
     const [product_amount,setProductAmount] = useState(0);
     const [total_amount,setTotalAmount] = useState(0);
+    const [image_ref,setImageRef] = useState({file_name:null,file:null});
+    const [loading,setLoading] = useState(false);
 
     const form_data = {}
 
     const handleComplete = () => {
-        console.log("Form completed!");
-        console.log(form_data);
+        setLoading(true);
+        let checkout_data =
+        {
+            fullname: fullname,
+            email: email,
+            phone: phone,
+            address: address,
+            product: product_type,
+            amount: Number(total_amount + '00'),
+            success_url: window.location + "/payment_confirm",
+            cancel_url: window.location.href
+        };
+
+        const payload = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(checkout_data)
+        }
+
+        fetch(`http://127.0.0.1:5000/item_checkout`, payload)
+            .then(res => res.json())
+            .then(json => {
+
+                    let data = json.data.attributes;
+                    form_data.reference_number = data.reference_number;
+
+                    sessionStorage.setItem('user_order', JSON.stringify(form_data));
+
+                    window.location = data.checkout_url;
+                }
+            )
+            .catch(err => console.log(err));
       };
 
+
+    const getImagePreview = (e) =>{
+        if (e.target.files && e.target.files[0]) {
+            setImageRef
+                (
+                    {
+                        file_name: e.target.files[0].name,
+                        file:URL.createObjectURL(e.target.files[0])
+                    }
+                );
+        }
+    }
 
     useEffect(() =>{
 
@@ -49,7 +90,17 @@ const MultistepForm = () => {
 
 
       return (
-            <div className="step-form container mt-5 px-5 w-75 rounded-3 b-shadow">
+        <>
+            {
+                loading ? 
+                    <div className='loader'>
+                        <InfinitySpin width='200' color="#537188"/>
+                    </div>
+
+                    :false
+            }
+           
+            <div className="step-form container mt-5 p-4 px-5 w-75 rounded-3 b-shadow">
                     <FormWizard
                     onComplete={handleComplete}
                     color="#537188"
@@ -70,10 +121,10 @@ const MultistepForm = () => {
                         </form>
                         <hr />
                     </FormWizard.TabContent>
-                    <FormWizard.TabContent  title="Request Details" icon="ti-settings">
+                    <FormWizard.TabContent  title="Order Details" icon="ti-settings">
                         <form className='tab-form d-flex flex-column justify-content-center row-gap-4 mt-4 px-3'>
                             <div className="form-group d-flex flex-column row-gap-2">
-                                <input type="file" name="design" id="design" />
+                                <input onChange={getImagePreview} type="file" placeholder='Upload Image Reference' name="design" id="design" />
                             </div>
                             <div className="form-group d-flex flex-column row-gap-2">
                                 <select onChange={(e) => setYarnType(e.target.value)} className='form-select' name="yarn-type" id="yarn-type">
@@ -109,14 +160,15 @@ const MultistepForm = () => {
                     </FormWizard.TabContent>
                     <FormWizard.TabContent title="Last step" icon="ti-check">
                         <div className='form-review d-flex flex-column align-items-start p-3 border border-3 rounded-3'>
-                            <h4 className='text-center mb-5 w-100'>-----Request Form Review-----</h4>
+                            <h4 className='text-center mb-5 w-100'>-----Order Form Review-----</h4>
                             <h5>Personal Details</h5>
                             <h6>Full Name: <span className='fw-light'>{fullname}</span></h6>
                             <h6>Email: <span className='fw-light'>{email}</span></h6>
                             <h6>Phone Number: <span className='fw-light'>{phone}</span></h6>
                             <h6>Delivery Address: <span className='fw-light'>{address}</span></h6>
                             <h5>Request Details</h5>
-                            <h6>Design Reference: <span className='fw-light'>Sample Image</span></h6>
+                            <h6>Design Reference: <span className='fw-light'>{image_ref.file_name}</span></h6>
+                            <div className='m-2' style={{width: "150px", height: "100px", backgroundImage: `url(${image_ref.file})`, backgroundSize: "cover", backgroundPosition: "center"}}></div>
                             <h6>Yarn Type: <span className='fw-light'>{yarn_type}</span></h6>
                             <h6>Product Type: <span className='fw-light'>{product_type}</span></h6>
                             <h5>Payment Details</h5>
@@ -130,6 +182,7 @@ const MultistepForm = () => {
                     </FormWizard.TabContent>
                     </FormWizard>
             </div>
+        </>
       );
 }
 
