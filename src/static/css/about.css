@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Homemade+Apple&display=swap');
+
+
+*{
+    font-family: 'Fira Mono', monospace;
+}
+
+.wrapper{
+    position: relative;
+    width: 90%;
+    min-height: 100vh;
+    padding: 70px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .div1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+        
+}
+.wrapper .div1 h1{
+    color: #537188;
+    font-family: Fira Mono;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    margin-left: 50px;
+
+}
+
+.wrapper .div1 p{
+    position: relative;
+    max-width: 600px;
+    color: #000;
+    font-family: Fira Mono;
+    font-size: 24px;
+    font-weight: 500;
+    
+}
+
+.wrapper .div2{
+    width: 600px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: flex-end;
+
+}
+
+
+.team{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #F4F2DE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team-background {
+    position: relative;
+    background-image: url('../images/Frame\ 118.png');
+    background-size: cover;
+    
+}
+
+    
+.team-content{
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+.team-content img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.center h1{
+    color: #537188;
+    font-family: Fira Mono;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+.box{
+    padding: 16px;
+    background: #537188;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+.box h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.box h5{
+    font-size: 15px;
+    font-weight: 600;
+    color: #b7b4bb;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    }
+    
+.button:hover {
+    background-color:hsl(185, 53%, 34%);
+}
+
+@media(max-width: 1240px){
+    .team{
+        width: 100%;
+        height: auto;
+        padding: 90px 2%;
+    }
+    .center h1{
+        font-size: 3.2rem;
+    }
+    .button{
+        font-size: 14px;
+    }
+}
