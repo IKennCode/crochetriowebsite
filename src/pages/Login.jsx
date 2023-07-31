@@ -11,12 +11,15 @@ const Login = () => {
         let registered_user_data = JSON.parse(localStorage.getItem('registered_user'))
         let is_registered = false;
 
-        registered_user_data.forEach(user_data => {
-            if(user_data.email === input_email && user_data.password === input_password){
-                is_registered = user_data;
-            }
+        if (registered_user_data !== null){
+            registered_user_data.forEach(user_data => {
+                if(user_data.email === input_email && user_data.password === input_password){
+                    is_registered = user_data;
+                }
 
-        })
+            })
+        }
+
 
         return is_registered;
 
@@ -51,7 +54,7 @@ const Login = () => {
                 {
                     showValidation ? 
                         <div className={`alert alert-danger mt-2`} role="alert">
-                            Account Not Existing, Please Registter First.
+                            Account Not Existing, Please Register First.
                         </div>
                     : false
                 }
