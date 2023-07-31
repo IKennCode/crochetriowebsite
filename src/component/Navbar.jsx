@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import nav_logo from '../static/images/nav_logo.png';
 import '../static/css/navbar.css';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 
 const Navbar = () => {
-  const [show_dropdown,setShowDropdown] = useState(false)
+  const [show_dropdown,setShowDropdown] = useState(false);
+  const session_user = JSON.parse(sessionStorage.getItem('session_user'));
+  const user_active = session_user ? session_user : false;
+
 
   return (
     <>
@@ -22,7 +25,7 @@ const Navbar = () => {
                 <CustomLink className='nav-link' to="/">Home</CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink className='nav-link'>About</CustomLink>
+                <CustomLink className='nav-link' to='/about'>About</CustomLink>
               </li>
               <li className="nav-item dropdown" onClick={(e)=>{
                   setShowDropdown((prev) => !prev)
@@ -48,7 +51,14 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <button className='btn fs-6 p-3 th-color-1 fw-medium'>Get Started</button>
+            {
+              user_active ? 
+                  <button className='btn fs-4 rounded-3 px-3 py-1 th-color-1 fw-medium'>{user_active.fullname.split(' ')[0]}</button>
+                :
+                  <Link to='/login'>
+                    <button className='btn fs-6 p-3 th-color-1 fw-medium'>Get Started</button>
+                  </Link>
+            }
         </div>
       </nav>
     </>

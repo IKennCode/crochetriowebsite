@@ -22,7 +22,9 @@ const MultistepForm = () => {
 
     const form_data = {}
 
-    const handleComplete = () => {
+    const handleComplete = (e) => {
+        e.preventDefault();
+        
         setLoading(true);
         let checkout_data =
         {
@@ -44,7 +46,7 @@ const MultistepForm = () => {
             body: JSON.stringify(checkout_data)
         }
 
-        fetch(`http://127.0.0.1:5000/item_checkout`, payload)
+        fetch(`https://paymongoapi.pythonanywhere.com/item_checkout`, payload)
             .then(res => res.json())
             .then(json => {
 
