@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -26,6 +27,7 @@ const Login = () => {
         let session_user =  seekAccount()
         if (session_user){
             sessionStorage.setItem('session_user', JSON.stringify(session_user));
+            alert("LOGIN SUCCESSFULLY!")
             window.location = window.origin + "/"
         }else{
             setShowValidation(true);
@@ -33,7 +35,7 @@ const Login = () => {
     }
 
   return (
-    <div className="container-fluid h-custom login-form py-5 rounded-3 b-shadow w-75 mt-5">
+    <div className="container-fluid h-custom login-form py-5 rounded-3 b-shadow w-75 mt-5 " style={{maxWidth: "1400px"}}>
         <div className="row d-flex justify-content-center align-items-center h-100">
         <div className="animated left col-md-9 col-lg-6 col-xl-5">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
@@ -59,8 +61,8 @@ const Login = () => {
                 </button>
 
                 <div className="text-center text-lg-start mt-4 pt-2">
-                    <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a 
-                        className="th-color-1">Register</a></p>
+                    <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <Link to="/register" 
+                        className="th-color-1">Register</Link></p>
                 </div>
             </form>
         </div>

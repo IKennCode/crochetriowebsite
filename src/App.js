@@ -12,12 +12,14 @@ import Footer from "./component/footer";
 import PaymentConfirm from "./pages/PaymentConfirm";
 import AboutPage from "./pages/About";
 import Login from "./pages/Login";
+import Register from "./pages/_Regsiter";
+
 
 
 
 function App() {
-  localStorage.setItem('registered_user',JSON.stringify([{fullname: 'joseph Naval', email: 'sample@Email.com', password: 'strongPassword'}]));
-
+  //sample data for local storage
+  // localStorage.setItem('registered_user',JSON.stringify([{fullname: 'joseph Naval', email: 'sample@Email.com', password: 'strongPassword', phone: 98876543219, address: "bingbong", account_type: "user"}]));
 
   return (
     <>
@@ -26,6 +28,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/services/commission" element={<Commission />} />
             <Route path="/services/commission/payment_confirm" element={<PaymentConfirm />} />
           </Routes>
