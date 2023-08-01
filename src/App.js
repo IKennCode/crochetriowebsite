@@ -13,7 +13,8 @@ import PaymentConfirm from "./pages/PaymentConfirm";
 import AboutPage from "./pages/About";
 import Login from "./pages/Login";
 import Register from "./pages/_Regsiter";
-
+import Marketplace from "./pages/Marketplace";
+import Merchant from "./pages/Merchant";
 
 
 
@@ -29,7 +30,9 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/merchant" element={<Merchant />} />
             <Route path="/services/commission" element={<Commission />} />
+            <Route path="/services/marketplace" element={<Marketplace />} />
             <Route path="/services/commission/payment_confirm" element={<PaymentConfirm />} />
           </Routes>
         <Footer />

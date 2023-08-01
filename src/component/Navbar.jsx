@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import nav_logo from '../static/images/nav_logo.png';
 import '../static/css/navbar.css';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
+import { ArrowRight } from 'react-bootstrap-icons';
 
 const Navbar = () => {
   const [show_dropdown,setShowDropdown] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
                     (
                       <div className='custom-dp d-flex flex-column position-absolute'>
                         <CustomLink className='nav-link' to="/services/commission" >Commision</CustomLink>
-                        <CustomLink className='nav-link' >Market Place</CustomLink>
+                        <CustomLink className='nav-link' to="/services/marketplace" >Market Place</CustomLink>
                       </div>
                     )
                   
@@ -55,8 +56,10 @@ const Navbar = () => {
               user_active ? 
                   <button className='btn fs-4 rounded-3 px-3 py-1 th-color-1 fw-medium'>{user_active.fullname.split(' ')[0]}</button>
                 :
-                  <Link to='/login'>
-                    <button className='btn fs-6 p-3 th-color-1 fw-medium'>Get Started</button>
+                  <Link className='text-decoration-none' to='/login'>
+                    <button className=' btn fs-6 p-3 th-color-1 fw-medium d-flex align-items-center column-gap-2'>
+                      Get Started <ArrowRight/>    
+                    </button>
                   </Link>
             }
         </div>

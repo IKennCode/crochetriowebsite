@@ -42,13 +42,15 @@ const Landing = () => {
                           </button>
                         </Link>
                         
-                        <div className='explore-btn d-flex flex-row'>
-                          <div className='arrow-explore'>
-                            <h6 className='text-white'>Explore</h6>
-                            <img width={110} src={Arrow} alt="" />
+                        <Link className='text-decoration-none' to="/services/marketplace">
+                          <div className='explore-btn d-flex flex-row'>
+                            <div className='arrow-explore'>
+                              <h6 className='text-white'>Explore</h6>
+                              <img width={110} src={Arrow} alt="" />
+                            </div>
+                            <img className='arrow-circle' height={40} src={circle} alt="" />
                           </div>
-                          <img className='arrow-circle' height={40} src={circle} alt="" />
-                        </div>
+                        </Link>
                     </div>
                 </Fade>
               </div>

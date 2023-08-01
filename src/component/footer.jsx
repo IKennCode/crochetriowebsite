@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-        <div className="footer-section container-fluid th-bg-1 p-4">
+        <div className="footer-section container-fluid th-bg-1 p-3">
             <div className="container">
                     <div className="row">
                         <div className="col-6 d-flex flex-column row-gap-3">
@@ -50,6 +50,8 @@ const Footer = () => {
                             </h5>
                         </div>
                     </div>    
+                    <hr className="mt-3"/>
+                <h6 className="text-white fw-light">&copy; 2023 YourCrochet. All Rights Reserved.</h6>
             </div>
         </div>
   )

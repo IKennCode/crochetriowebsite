@@ -1,0 +1,44 @@
+.options{
+    height: 20rem;
+}
+
+.options h5{
+    position: relative;
+    z-index: 100;
+}
+
+.options h5::before{
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    border-radius: 8px;
+    transition: transform .5s cubic-bezier(0.21, 0.05, 0, 1.11);
+    z-index: -1;
+}
+
+.options h5:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: var(--th-pal-1);
+}
+
+.options h5:hover{
+    color: white!important;
+}
+
+.data-table{
+    height: 20rem;
+    overflow-y: auto;
+}
+
+.data-table button{
+    background-color: var(--th-pal-1)!important;
+    justify-self: end;
+    margin-top: 5.5rem;
+}
+
+.product-table{
+    height: 30rem;
+}
