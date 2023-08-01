@@ -76,11 +76,8 @@ const Landing = () => {
                     <span>Details</span> 
                     <span className='deets-sqr th-bg-1'></span></p>
                   <p className='fw-medium steps-desc'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Eius corrupti est beatae laboriosam reiciendis, natus, cup
-                    iditate reprehenderit exercitationem quaerat voluptate tem
-                    poribus cum, praesentium in numquam! Odit consequatur fugi
-                    t doloremque voluptatum.
+                    Give us your design via image uploading and 
+                    we will make sure that your chosen design will come alive.
                   </p>
                 </div>
               </div>            
@@ -90,16 +87,14 @@ const Landing = () => {
               <div className="col-12 steps d-flex flex-row justify-content-end">
                 <div className='w-50'>
                   <h6 className='text-white th-bg-1'>STEP 2</h6>
-                  <h1 className='th-color-1 fw-bold'>Tool Specification</h1>
+                  <h1 className='th-color-1 fw-bold'>Choose Desire Material</h1>
                   <p className='th-color-1 fw-medium d-flex flex-row align-items-center column-gap-1'>
                     <span>Details</span> 
                     <span className='deets-sqr th-bg-1'></span></p>
                   <p className='fw-medium steps-desc'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Eius corrupti est beatae laboriosam reiciendis, natus, cup
-                    iditate reprehenderit exercitationem quaerat voluptate tem
-                    poribus cum, praesentium in numquam! Odit consequatur fugi
-                    t doloremque voluptatum.
+                    Choosing the right material for your crochet product is one 
+                    of the best part because you can choose between three different
+                    material for your crochet product. 
                   </p>
                 </div>
               </div>            
@@ -114,11 +109,9 @@ const Landing = () => {
                     <span>Details</span> 
                     <span className='deets-sqr th-bg-1'></span></p>
                   <p className='fw-medium steps-desc'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Eius corrupti est beatae laboriosam reiciendis, natus, cup
-                    iditate reprehenderit exercitationem quaerat voluptate tem
-                    poribus cum, praesentium in numquam! Odit consequatur fugi
-                    t doloremque voluptatum.
+                    Your crochet product will not be complete if there is no specific
+                    product tyoe that the crochet product will turn into. So we provide 
+                    you with three different choices of product type you can choose from.
                   </p>
                 </div>
               </div>            
@@ -129,10 +122,9 @@ const Landing = () => {
                 <div className='w-50'>              
                   <h1 className='th-color-1 fw-bold'>Why Choose Us</h1>
                   <p className=' fw-medium'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Odit repellendus maiores voluptatem, iusto, itaque modi 
-                    corrupti totam fugit incidunt perferendis asperiores exe
-                    rcitationem ad sunt rem qui saepe repellat excepturi dolor.
+                    We provide excellent service to our client and we make sure that all 
+                    the products are made by crochet professionals. We also prioritize quality
+                    in everything we do to make assure the satisfcation our Clients. 
                   </p>
                   <div className='d-flex flex-row column-gap-5 align-items-center mt-5'>
                     <img width="64" height="64" src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/64/537188/external-fast-time-productivity-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png" />

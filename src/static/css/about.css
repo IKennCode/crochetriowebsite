@@ -5,7 +5,7 @@
     font-family: 'Fira Mono', monospace;
 }
 
-.wrapper{
+/* .wrapper{
     position: relative;
     width: 90%;
     min-height: 100vh;
@@ -14,25 +14,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} 
 
 .wrapper .div1{
     display: flex;
     flex-direction: column;
     width: 50%;
         
-}
-.wrapper .div1 h1{
-    color: #537188;
-    font-family: Fira Mono;
+} */
+
+.wrapper h1{
     font-size: 64px;
-    font-weight: 700;
-    margin-bottom: 50px;
-    margin-left: 50px;
-
+    padding: 0 2rem;
+    border-bottom: 2px solid #656f76;
 }
 
-.wrapper .div1 p{
+/* .wrapper .div1 p{
     position: relative;
     max-width: 600px;
     color: #000;
@@ -48,7 +45,7 @@
     margin-top: 50px;
     justify-content: flex-end;
 
-}
+}  */
 
 
 .team{
@@ -60,6 +57,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 2rem 2rem;
 }
 
 .team-background {
@@ -68,7 +66,6 @@
     background-size: cover;
     
 }
-
     
 .team-content{
     width: 100%;
@@ -92,7 +89,7 @@
     font-family: Fira Mono;
     font-size: 64px;
     font-weight: 700;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     margin-left: 50px;
 }
 .box{
@@ -126,7 +123,7 @@
     color: #000000;
     font-size: 18px;
     padding: 16px 32px;
-    border-radius: 30px;
+    border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s;
     }
