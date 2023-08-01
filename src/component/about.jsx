@@ -31,7 +31,6 @@ const About = () => {
           </div>
         </div>
 
-
       </div>
 
       <section className="team team-background">

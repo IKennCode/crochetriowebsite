@@ -23,8 +23,6 @@ const MultistepForm = () => {
     const form_data = {}
 
     const handleComplete = (e) => {
-        e.preventDefault();
-        
         setLoading(true);
         let checkout_data =
         {
