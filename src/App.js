@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './static/css/style_config.css';
 import './static/css/constant_component.css';
+import './static/css/cards.css';
 
 import Navbar from "./component/Navbar";
 import Landing from "./pages/Landing";
@@ -12,9 +13,15 @@ import Footer from "./component/footer";
 import PaymentConfirm from "./pages/PaymentConfirm";
 import AboutPage from "./pages/About";
 import Login from "./pages/Login";
-import Register from "./pages/_Regsiter";
-import Marketplace from "./pages/Marketplace";
-import Merchant from "./pages/Merchant";
+import Register from "./pages/_Regsiter"
+import  Products from "./component/products";
+import contents from './content';
+
+
+
+
+
+
 
 
 
@@ -30,12 +37,26 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/merchant" element={<Merchant />} />
             <Route path="/services/commission" element={<Commission />} />
-            <Route path="/services/marketplace" element={<Marketplace />} />
             <Route path="/services/commission/payment_confirm" element={<PaymentConfirm />} />
           </Routes>
+          <h1>Premade Crochet Designs</h1>
+          <div className='crochet'>
+                {contents.map(contents => (
+                    <Products 
+                        key={contents.id}
+                        image={contents.image}
+                        name={contents.name}
+                        sale={contents.sale}
+                        price={contents.price}
+                        totalSales={contents.totalSales}
+                        timeLeft={contents.timeLeft}
+                        rating={contents.rating}
+                    />
+                ))}
+            </div>
         <Footer />
+        
     </>
   );
 }
