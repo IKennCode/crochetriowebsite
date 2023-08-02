@@ -6,6 +6,7 @@ import { ArrowRight } from 'react-bootstrap-icons';
 
 const Navbar = () => {
   const [show_dropdown,setShowDropdown] = useState(false);
+  const [show_account_option,setShowAccOption] = useState(false);
   const session_user = JSON.parse(sessionStorage.getItem('session_user'));
   const user_active = session_user ? session_user : false;
 
@@ -48,17 +49,28 @@ const Navbar = () => {
                   
               </li>
               <li className="nav-item">
-                <CustomLink className='nav-link' >Contact Us</CustomLink>
+                <CustomLink className='nav-link' to="/contact">Contact Us</CustomLink>
               </li>
             </ul>
           </div>
             {
               user_active ? 
-                  <button className='btn fs-4 rounded-3 px-3 py-1 th-color-1 fw-medium'>{user_active.fullname.split(' ')[0]}</button>
+                  <div onClick={(e)=>{ setShowAccOption((prev) => !prev)
+                    }} className='btn fs-4 rounded-3 px-3 py-1 th-color-1 fw-medium'>{user_active.fullname.split(' ')[0]}
+
+                      {
+                         show_account_option ? 
+                            <div className='custom-dp d-flex flex-column position-absolute mt-2'>
+                              <CustomLink className='fs-5 text-decoration-none text-dark ' to="/logout" >Logout</CustomLink>
+                            </div>
+                          : false
+                      }
+                     
+                  </div>
                 :
                   <Link className='text-decoration-none' to='/login'>
                     <button className=' btn fs-6 p-3 th-color-1 fw-medium d-flex align-items-center column-gap-2'>
-                      Get Started <ArrowRight/>    
+                      Get Started <ArrowRight/>  
                     </button>
                   </Link>
             }

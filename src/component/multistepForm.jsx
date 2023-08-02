@@ -5,7 +5,7 @@ import 'react-form-wizard-component/dist/style.css';
 import '../static/css/commission.css'
 
 const MultistepForm = () => {
-    sessionStorage.clear()
+    sessionStorage.setItem('user_order', JSON.stringify([]))
 
     const [fullname,setFullname] = useState("");
     const [email,setEmail] = useState("");

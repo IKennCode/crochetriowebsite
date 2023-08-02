@@ -7,6 +7,15 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0,0.54);
 }
 
+.account-dp{
+    width: max-content;
+    border-radius: 8px;
+    padding: .5rem .5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0,0.54);
+}
+
+
 .nav-link{
     color: var(--th-pal-1);
     text-decoration: none;

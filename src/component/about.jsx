@@ -45,14 +45,14 @@ const About = () => {
             <img src={naval} alt="Joseph Naval" />
             <h3>Joseph Naval</h3>
             <h5>"Full-stack Web Developer."</h5>
-            <a href="https://your-link.com" className="button">View E-Portfolio</a>
+            <a href="https://shimmering-kleicha-7a0218.netlify.app/index.html" className="button">View E-Portfolio</a>
           </div>
 
           <div className="box">
             <img src={uknown} alt="Kenneth Dimalibot Jobs" />
-            <h3>Kenneth Dimalibot</h3>
+            <h3>Kenneth Dimalibot Jobs</h3>
             <h5>"Full-stack Web Developer."</h5>
-            <a href="https://your-link.com" className="button">View E-Portfolio</a>
+            <a href="https://ikenncode.netlify.app/" className="button">View E-Portfolio</a>
 
 
           </div>
@@ -61,7 +61,7 @@ const About = () => {
             <img src={uknown} alt="Kylle Tallan" />
             <h3>Kylle Tallan</h3>
             <h5>"Full-stack Web Developer."</h5>
-            <a href="https://your-link.com" className="button">View E-Portfolio</a>
+            <a href="https://github.com/kylle-talan/my-portfolio-page" className="button">View E-Portfolio</a>
 
           </div>
 
@@ -69,7 +69,7 @@ const About = () => {
             <img src={masangkay} alt="Josiah Masangkay" />
             <h3>Josiah Masangkay</h3>
             <h5>"Full-stack Web Developer."</h5>
-            <a href="https://josiahmasangkay.github.io/e-portfolio/" className="button">View E-Portfolio</a>
+            <a href="https://your-link.com" className="button">View My E-Portfolio</a>
 
           </div>
 

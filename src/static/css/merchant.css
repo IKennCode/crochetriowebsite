@@ -1,5 +1,5 @@
 .options{
-    height: 20rem;
+    height: 34rem;
 }
 
 .options h5{
@@ -30,15 +30,17 @@
 
 .data-table{
     height: 20rem;
+    max-width: 68rem;
     overflow-y: auto;
 }
 
-.data-table button{
+.insert-btn{
     background-color: var(--th-pal-1)!important;
-    justify-self: end;
+    align-self: end;
     margin-top: 5.5rem;
 }
 
 .product-table{
     height: 30rem;
+    max-width: 300px;
 }

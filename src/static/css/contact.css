@@ -1,0 +1,83 @@
+.c-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+    grid-gap: 10px;
+    margin-top: 50px;
+}
+
+.contact {
+    color: #f4f2de;
+    width: 250px;
+    height: 320px;
+    border-radius: 15px;
+    background: #537188;
+    text-align: center;
+}
+
+.icon {
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.contact-left {
+    flex-basis: 50%;
+}
+
+.contact-right {
+    flex-basis: 50%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #241370;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #537188;
+    display: inline-block;
+}
+
+
+.btn.btn2 {
+    display: inline-block;
+    background: #537188;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #f4f2de;
+    padding: 15px;
+    margin: 15px 0;
+    color: #080808;
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+
+form .btn2 {
+    color: #f4f2de;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
