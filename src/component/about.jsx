@@ -50,7 +50,7 @@ const About = () => {
 
           <div className="box">
             <img src={uknown} alt="Kenneth Dimalibot Jobs" />
-            <h3>Kenneth Dimalibot Jobs</h3>
+            <h3>Kenneth Dimalibot</h3>
             <h5>"Full-stack Web Developer."</h5>
             <a href="https://your-link.com" className="button">View E-Portfolio</a>
 
@@ -69,7 +69,7 @@ const About = () => {
             <img src={masangkay} alt="Josiah Masangkay" />
             <h3>Josiah Masangkay</h3>
             <h5>"Full-stack Web Developer."</h5>
-            <a href="https://your-link.com" className="button">View My E-Portfolio</a>
+            <a href="https://josiahmasangkay.github.io/e-portfolio/" className="button">View E-Portfolio</a>
 
           </div>
 
